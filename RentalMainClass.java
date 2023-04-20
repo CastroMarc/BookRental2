@@ -39,21 +39,25 @@ public class RentalMainClass {
 				
 				Book book = books.get(choice);
 				int copy = book.get_copy();
-				if (copy > 0) {
-				System.out.println("YOU RENTED: " + books.get(choice).get_name());
-				book.set_copy(copy-=1);
+				if (copy > 0) 
+				{
+				   System.out.println("YOU RENTED: " + books.get(choice).get_name());
+				   book.set_copy(copy-=1);
 				}
 				else {
-				System.out.println("NO COPIES LEFT");
+				   System.out.println("NO MORE COPIES");
 				}
 				
 				System.out.println("RENT AGAIN? [Y/N]");
-				String rentAgain = scan.next();
-				if (rentAgain.equalsIgnoreCase("n")) {
+				String rentMore = scan.next();
+				if (rentMore.equals("N")) 
+				{
 					end = true;
 				}
 					
-			} catch (IndexOutOfBoundsException e) {
+			} 
+			catch (IndexOutOfBoundsException e) 
+			{
 				System.out.println("INVALID CHOICE");
 			}
 			catch (InputMismatchException e) {
