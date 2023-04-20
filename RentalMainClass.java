@@ -33,9 +33,9 @@ public class RentalMainClass {
 		while (end==false) 
 		{
 			try {
-				Scanner scan = new Scanner(System.in);
+				Scanner scans = new Scanner(System.in);
 				System.out.print("CHOOSE A NUMBER TO RENT A BOOK: ");
-				int choice = scan.nextInt();
+				int choice = scans.nextInt();
 				
 				Book book = books.get(choice);
 				int copy = book.get_copy();
@@ -49,7 +49,7 @@ public class RentalMainClass {
 				}
 				
 				System.out.println("RENT AGAIN? [Y/N]");
-				String rentMore = scan.next();
+				String rentMore = scans.next();
 				if (rentMore.equals("N")) 
 				{
 					end = true;
@@ -60,7 +60,9 @@ public class RentalMainClass {
 			{
 				System.out.println("INVALID CHOICE");
 			}
-			catch (InputMismatchException e) {
+			
+			catch (InputMismatchException e) 
+			{
 				System.out.println("INVALID INPUT");
 			}
 			System.out.println("PROGRAM END");
