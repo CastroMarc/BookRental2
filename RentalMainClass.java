@@ -50,21 +50,20 @@ public class RentalMainClass {
 				
 				System.out.println("RENT AGAIN? [Y/N]");
 				String rentMore = scans.next();
-				if (rentMore.equals("N")) 
-				{
+				if (rentMore.equals("N")) {
 					end = true;
 				}
-					
-			} 
-			catch (IndexOutOfBoundsException e) 
-			{
-				System.out.println("INVALID CHOICE");
+				
+			}
+				
+			    catch (IndexOutOfBoundsException ex) {
+				    System.out.println("INVALID CHOICE");
 			}
 			
-			catch (InputMismatchException e) 
-			{
+			    catch (InputMismatchException ex) {
 				System.out.println("INVALID INPUT");
 			}
+			
 			System.out.println("PROGRAM END");
 		}
 	}
