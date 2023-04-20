@@ -15,7 +15,7 @@ public class RentalMainClass {
 		
 		Book bookNum3 = new Book("Programming Concepts and Logic Formulation", "Rosauro E. Manuel", 4);
 		
-
+		books.add(bookNum1);
 		books.add(bookNum2);
 		books.add(bookNum3);
 		
