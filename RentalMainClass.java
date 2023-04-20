@@ -52,6 +52,7 @@ public class RentalMainClass {
 				String rentMore = scans.next();
 				if (rentMore.equals("N")) {
 					end = true;
+					System.out.println("PROGRAM END");
 				}
 				
 			}
@@ -63,8 +64,7 @@ public class RentalMainClass {
 			    catch (InputMismatchException ex) {
 				System.out.println("INVALID INPUT");
 			}
-			
-			System.out.println("PROGRAM END");
+			   
 		}
 	}
 
